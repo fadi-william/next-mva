@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`i18n model tests can change language 1`] = `
+Object {
+  "locale": "fr",
+  "messages": Object {
+    "lang": Object {
+      "english": "Anglais",
+      "french": "Français",
+    },
+    "nav": Object {
+      "about": "À props",
+      "home": "Accueil",
+    },
+  },
+}
+`;
+
+exports[`i18n model tests can create an i18n model 1`] = `
+Object {
+  "locale": "en",
+  "messages": Object {
+    "lang": Object {
+      "english": "English",
+      "french": "French",
+    },
+    "nav": Object {
+      "about": "About",
+      "home": "Home",
+    },
+  },
+}
+`;
+
+exports[`i18n model tests can get a store 1`] = `
+Object {
+  "locale": "en",
+  "messages": Object {
+    "lang": Object {
+      "english": "English",
+      "french": "French",
+    },
+    "nav": Object {
+      "about": "About",
+      "home": "Home",
+    },
+  },
+}
+`;
+
+exports[`i18n model tests can restore am i18n model from a snaphost 1`] = `
+Object {
+  "locale": "en",
+  "messages": Object {
+    "lang": Object {
+      "english": "English",
+      "french": "French",
+    },
+    "nav": Object {
+      "about": "About",
+      "home": "Home",
+    },
+  },
+}
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show model tests can create a show model 1`] = `
+Object {
+  "id": 975,
+  "image": "https://img.url/1",
+  "isLoading": true,
+  "name": "A show",
+  "summary": "This is the show summary",
+}
+`;

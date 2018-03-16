@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show list model tests can create a show list model 1`] = `
+Object {
+  "isLoading": true,
+  "shows": Array [
+    Object {
+      "id": 757,
+      "image": "https://img.url/1",
+      "isLoading": true,
+      "name": "A show",
+      "summary": "This is the show summary",
+    },
+    Object {
+      "id": 1146,
+      "image": "https://img.url/2",
+      "isLoading": true,
+      "name": "A second show",
+      "summary": "This is the second show summary",
+    },
+  ],
+}
+`;

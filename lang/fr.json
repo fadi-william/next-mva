@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À props"
+  },
+  "lang": {
+    "french": "Français",
+    "english": "Anglais"
+  }
+}

@@ -1,0 +1,11 @@
+# Ignore the node modules.
+/node_modules/
+
+# Ignore next's folder.
+.next
+
+# Ignore code coverage report
+coverage
+
+# Ignore yarn errors.
+yarn-error.log

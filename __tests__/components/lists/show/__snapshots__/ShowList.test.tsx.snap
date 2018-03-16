@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show list item component after loading - snapshot test 1`] = `
+<div>
+  <h1>
+    Shows
+  </h1>
+  <ul>
+    <li>
+      <a
+        href="/p/975"
+        onClick={[Function]}
+      >
+        Batman
+      </a>
+    </li>
+    <li>
+      <a
+        href="/p/481"
+        onClick={[Function]}
+      >
+        The Batman
+      </a>
+    </li>
+    <li>
+      <a
+        href="/p/504"
+        onClick={[Function]}
+      >
+        Batman Beyond
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`show list item component while loading - snapshot test 1`] = `
+<div>
+  <h1>
+    Shows
+  </h1>
+  <div>
+    Loading...
+  </div>
+</div>
+`;

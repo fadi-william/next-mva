@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test language switcher component - snapshot test 1`] = `
+<select
+  defaultValue="en"
+  onChange={[Function]}
+>
+  <option
+    value="fr"
+  >
+    French
+  </option>
+  <option
+    value="en"
+  >
+    English
+  </option>
+</select>
+`;

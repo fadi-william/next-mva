@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show entity after loading - snapshot test 1`] = `
+<div
+  className="Show"
+>
+  <div>
+    <h1>
+      A show
+    </h1>
+    <p>
+      This is the show summary
+    </p>
+    <img
+      src="https://img.url/1"
+    />
+  </div>
+</div>
+`;
+
+exports[`show entity while loading - snapshot test 1`] = `
+<div
+  className="Show"
+>
+  <div>
+    Loading...
+  </div>
+</div>
+`;

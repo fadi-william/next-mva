@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`show list item component - snapshot test 1`] = `
+<li>
+  <a
+    href="/p/757"
+    onClick={[Function]}
+  />
+</li>
+`;
