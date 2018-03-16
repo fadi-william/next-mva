@@ -9,7 +9,7 @@ import Layout from "../app/components/layout/Layout/Layout";
 // The mst store.
 import { getStore } from "../app/models/show/Show";
 
-// The show page's state.
+// The show page's props interface.
 interface IPostProps extends InjectedIntlProps {
     url: any;
     isServer: boolean;
