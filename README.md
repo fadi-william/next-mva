@@ -31,8 +31,6 @@ Once you are done with your project.
 1.  Run `yarn build` to build your project.
 2.  Deploy the node application.
 
-Note: There's a configured continuous integration workflow to deploy this sample app to [Now](https://zeit.co/now).
-
 ## License
 
 ```
