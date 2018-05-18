@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/levioza/next-mva.svg?branch=master)](https://travis-ci.org/levioza/next-mva)
 [![codecov](https://codecov.io/gh/levioza/next-mva/branch/master/graph/badge.svg)](https://codecov.io/gh/levioza/next-mva)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 This small app has been developed to provide a minimum viable architecture of a scalable next application.
 
