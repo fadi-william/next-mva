@@ -14,7 +14,6 @@ interface IHeaderProps {
 }
 
 class Header extends React.Component<IHeaderProps> {
-
   public render() {
     const { messages } = this.props;
 
@@ -28,7 +27,7 @@ class Header extends React.Component<IHeaderProps> {
             <a>{messages.nav.about}</a>
           </Link>
           <div className="lang-switcher-ph">
-              <LanguageSwitcher />
+            <LanguageSwitcher />
           </div>
         </nav>
       </div>

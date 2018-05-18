@@ -13,29 +13,24 @@ import { getStore } from "../../../app/models/I18n";
 jest.mock("../../../app/storage/i18n");
 
 it("test language switcher component - snapshot test", () => {
+  const tree = renderer.create(<LanguageSwitcher />).toJSON();
 
-    const tree = renderer.create(
-        <LanguageSwitcher />,
-    ).toJSON();
-
-    expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
 
 it("test language switcher component's select options", () => {
-
-    const wrapper = Enzyme.mount(<LanguageSwitcher />);
-    expect(wrapper.find("select>option").length).toBe(2);
+  const wrapper = Enzyme.mount(<LanguageSwitcher />);
+  expect(wrapper.find("select>option").length).toBe(2);
 });
 
 it("test language switcher component in action", () => {
+  const wrapper = Enzyme.mount(<LanguageSwitcher />);
+  expect(wrapper.find("select>option").length).toBe(2);
 
-    const wrapper = Enzyme.mount(<LanguageSwitcher />);
-    expect(wrapper.find("select>option").length).toBe(2);
+  expect(wrapper.find("select").prop("defaultValue")).toBe("en");
+  wrapper.find("select").simulate("change", { target: { value: "fr" } });
+  expect(wrapper.find("select").prop("defaultValue")).toBe("fr");
 
-    expect(wrapper.find("select").prop("defaultValue")).toBe("en");
-    wrapper.find("select").simulate("change", { target: { value : "fr"}});
-    expect(wrapper.find("select").prop("defaultValue")).toBe("fr");
-
-    const store = getStore();
-    expect(store.locale).toBe("fr");
+  const store = getStore();
+  expect(store.locale).toBe("fr");
 });

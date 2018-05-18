@@ -6,9 +6,7 @@ import AboutPage from "../../pages/about";
 jest.mock("../../app/storage/i18n");
 
 it("about page - snapshot test", () => {
-    const tree = renderer.create(
-        <AboutPage />,
-    ).toJSON();
+  const tree = renderer.create(<AboutPage />).toJSON();
 
-    expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });

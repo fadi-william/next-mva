@@ -6,22 +6,20 @@ import * as React from "react";
 import { getStore } from "../../models/I18n";
 
 interface II18nProps {
-    messages: any;
+  messages: any;
 }
 
-export default function i18nMessagesHOC(Component: React.ComponentClass<II18nProps>) {
+export default function i18nMessagesHOC(
+  Component: React.ComponentClass<II18nProps>
+) {
+  class I18nMessages extends React.Component {
+    public render() {
+      const store = getStore();
+      const messages = store.messages;
 
-    class I18nMessages extends React.Component {
-
-        public render() {
-            const store = getStore();
-            const messages = store.messages;
-
-            return (
-                <Component messages={messages} />
-            );
-        }
+      return <Component messages={messages} />;
     }
+  }
 
-    return observer(I18nMessages);
+  return observer(I18nMessages);
 }

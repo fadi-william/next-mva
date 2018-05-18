@@ -19,40 +19,41 @@ export type TI18n = typeof I18n.Type;
 let store: TI18n = null;
 let currentLocale = null;
 
-export const I18n = types.model({
+export const I18n = types
+  .model({
     locale: types.string,
-    messages: types.optional(types.frozen, {}),
-})
-.actions( (self) => ({
+    messages: types.optional(types.frozen, {})
+  })
+  .actions(self => ({
     loadLocale(lang: string) {
-        self.locale = lang;
-        setCurrentUserLocale(lang);
-        if (lang === "en") {
-            addLocaleData(enLocaleData);
-            self.messages = enTranslatedData;
-        } else {
-            addLocaleData(frLocaleData);
-            self.messages = frTranslatedData;
-        }
-    },
-}))
-.actions( (self) => ({
+      self.locale = lang;
+      setCurrentUserLocale(lang);
+      if (lang === "en") {
+        addLocaleData(enLocaleData);
+        self.messages = enTranslatedData;
+      } else {
+        addLocaleData(frLocaleData);
+        self.messages = frTranslatedData;
+      }
+    }
+  }))
+  .actions(self => ({
     afterCreate() {
-        self.loadLocale(self.locale);
-    },
-}));
+      self.loadLocale(self.locale);
+    }
+  }));
 
 // Utility function - Instantiates a part of the mobx-state-tree store.
 export function getStore(locale?, snapshot = null) {
-    if (!locale) {
-        locale = getCurrentUserLocale();
-        currentLocale = locale;
-    }
-    if (store === null || currentLocale !== locale) {
-        store = I18n.create({locale});
-    }
-    if (snapshot) {
-      applySnapshot(store, snapshot);
-    }
-    return store;
+  if (!locale) {
+    locale = getCurrentUserLocale();
+    currentLocale = locale;
+  }
+  if (store === null || currentLocale !== locale) {
+    store = I18n.create({ locale });
+  }
+  if (snapshot) {
+    applySnapshot(store, snapshot);
+  }
+  return store;
 }

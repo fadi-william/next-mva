@@ -11,50 +11,51 @@ import { getCurrentUserLocaleFromContext } from "../../storage/i18n";
 
 // The next page component interface.
 interface INextComponent<T> extends React.ComponentClass<T> {
-    getInitialProps?: (context) => {};
+  getInitialProps?: (context) => {};
 }
 
 // The HOC's props interface.
 interface IPageWithIntlProps extends InjectedIntlProps {
-    now?: Date;
+  now?: Date;
 }
 
 export default (Page: INextComponent<any>) => {
+  // Inject intl to the page.
+  const IntlPage = injectIntl(Page);
 
-    // Inject intl to the page.
-    const IntlPage = injectIntl(Page);
+  class PageWithIntl extends React.Component<IPageWithIntlProps> {
+    public static async getInitialProps(context) {
+      const props = await Page.getInitialProps(context);
 
-    class PageWithIntl extends React.Component<IPageWithIntlProps> {
+      // Get the user locale from the cookies.
+      const locale = getCurrentUserLocaleFromContext(context);
+      // This is used to define the initial locale.
+      getStore(locale);
 
-        public static async getInitialProps(context) {
-            const props = await Page.getInitialProps(context);
+      const now = Date.now();
 
-            // Get the user locale from the cookies.
-            const locale = getCurrentUserLocaleFromContext(context);
-            // This is used to define the initial locale.
-            getStore(locale);
-
-            const now = Date.now();
-
-            return {
-                now,
-                ...props,
-            };
-        }
-
-        public render() {
-
-            const { now, ...props} = this.props;
-
-            const store = getStore();
-
-            return (
-                <IntlProvider locale={store.locale} messages={store.messages} initialNow={now}>
-                    <IntlPage {...props} />
-                </IntlProvider>
-            );
-        }
+      return {
+        now,
+        ...props
+      };
     }
 
-    return observer(PageWithIntl);
+    public render() {
+      const { now, ...props } = this.props;
+
+      const store = getStore();
+
+      return (
+        <IntlProvider
+          locale={store.locale}
+          messages={store.messages}
+          initialNow={now}
+        >
+          <IntlPage {...props} />
+        </IntlProvider>
+      );
+    }
+  }
+
+  return observer(PageWithIntl);
 };

@@ -8,26 +8,24 @@ import ShowList from "../../../../app/components/lists/show/ShowList/ShowList";
 jest.mock("../../../../app/service/showService");
 
 it("show list item component while loading - snapshot test", () => {
-    const showStore = getStore(false);
-    const tree = renderer.create(
-        <ShowList showList={showStore} />,
-    ).toJSON();
+  const showStore = getStore(false);
+  const tree = renderer.create(<ShowList showList={showStore} />).toJSON();
 
-    expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
 
 it("show list item component after loading - snapshot test", async () => {
-    const showStore = getStore(false);
-    await showStore.afterCreate();
-    await showStore.getShows();
+  const showStore = getStore(false);
+  await showStore.afterCreate();
+  await showStore.getShows();
 
-    let tree;
-    await new Promise( (res) => setTimeout(() => {
-        tree = renderer.create(
-            <ShowList showList={showStore} />,
-        ).toJSON();
-        res();
-    }, 3000));
+  let tree;
+  await new Promise(res =>
+    setTimeout(() => {
+      tree = renderer.create(<ShowList showList={showStore} />).toJSON();
+      res();
+    }, 3000)
+  );
 
-    expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });

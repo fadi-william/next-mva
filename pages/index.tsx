@@ -11,29 +11,28 @@ import { getStore } from "../app/models/show/ShowList";
 
 // The Index's props interface.
 interface IIndexProps {
-    isServer: boolean;
+  isServer: boolean;
 }
 
 export class Index extends React.Component<IIndexProps> {
+  public static getInitialProps({ req }): any {
+    const isServer = !!req;
+    return {
+      isServer
+    };
+  }
 
-    public static getInitialProps({req}): any {
-        const isServer = !!req;
-        return {
-            isServer,
-        };
-    }
+  public render() {
+    const { isServer } = this.props;
 
-    public render() {
-        const { isServer } = this.props;
+    const store = getStore(isServer);
 
-        const store = getStore(isServer);
-
-        return (
-            <Layout>
-                <ShowList showList={store} />
-            </Layout>
-        );
-    }
+    return (
+      <Layout>
+        <ShowList showList={store} />
+      </Layout>
+    );
+  }
 }
 
 export default pageWithIntl(Index);

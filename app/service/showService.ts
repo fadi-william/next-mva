@@ -2,25 +2,26 @@
 import Axios from "./axios";
 
 interface IShow {
-    id: number;
-    image: {
-        medium: string;
-    };
-    name: string;
-    summary: string;
+  id: number;
+  image: {
+    medium: string;
+  };
+  name: string;
+  summary: string;
 }
 
 interface IShowResponseModel {
-    show: IShow;
+  show: IShow;
 }
 
-interface IShowsResponseModel extends Array<IShowResponseModel> {
-}
+interface IShowsResponseModel extends Array<IShowResponseModel> {}
 
 export function getShows() {
-    return Axios.get<IShowsResponseModel>("https://api.tvmaze.com/search/shows?q=batman");
+  return Axios.get<IShowsResponseModel>(
+    "https://api.tvmaze.com/search/shows?q=batman"
+  );
 }
 
 export function getShow(id: number) {
-    return Axios.get<IShowResponseModel>(`https://api.tvmaze.com/shows/${id}`);
+  return Axios.get<IShowResponseModel>(`https://api.tvmaze.com/shows/${id}`);
 }

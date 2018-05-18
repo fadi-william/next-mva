@@ -7,20 +7,21 @@ import { getStore } from "../../models/I18n";
 
 @observer
 class LanguageSwitcher extends React.Component {
+  public render() {
+    const store = getStore();
 
-    public render() {
-
-        const store = getStore();
-
-        return (
-            <select defaultValue={store.locale} onChange={(event) => {
-                    store.loadLocale(event.target.value);
-                }}>
-                <option value="fr">French</option>
-                <option value="en">English</option>
-            </select>
-        );
-    }
+    return (
+      <select
+        defaultValue={store.locale}
+        onChange={event => {
+          store.loadLocale(event.target.value);
+        }}
+      >
+        <option value="fr">French</option>
+        <option value="en">English</option>
+      </select>
+    );
+  }
 }
 
 export default LanguageSwitcher;

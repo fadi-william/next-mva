@@ -11,35 +11,33 @@ import { getStore } from "../app/models/show/Show";
 
 // The show page's props interface.
 interface IPostProps extends InjectedIntlProps {
-    url: any;
-    isServer: boolean;
+  url: any;
+  isServer: boolean;
 }
 
 export class Post extends React.Component<IPostProps> {
+  public static getInitialProps({ req }) {
+    const isServer = !!req;
 
-    public static getInitialProps({req}) {
+    return {
+      isServer
+    };
+  }
 
-        const isServer = !!req;
+  public render() {
+    const { isServer } = this.props;
 
-        return {
-            isServer,
-        };
-    }
+    const { id } = this.props.url.query;
 
-    public render() {
-        const { isServer } = this.props;
+    // Set the id of the current show.
+    const store = getStore(isServer, Number(id));
 
-        const { id } = this.props.url.query;
-
-        // Set the id of the current show.
-        const store = getStore(isServer, Number(id));
-
-        return (
-            <Layout>
-                <Show show={store} />
-            </Layout>
-        );
-    }
+    return (
+      <Layout>
+        <Show show={store} />
+      </Layout>
+    );
+  }
 }
 
 export default pageWithIntl(Post);

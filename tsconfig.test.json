@@ -1,15 +1,12 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
-        "noImplicitAny": false,
-        "sourceMap": false,
-        "moduleResolution": "node",
-        "jsx": "react",
-        "allowSyntheticDefaultImports": false,
-        "typeRoots": [
-			"./node_modules/@types",
-			"./src/types/"
-		]
-    }
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": false,
+    "typeRoots": ["./node_modules/@types", "./src/types/"]
+  }
 }

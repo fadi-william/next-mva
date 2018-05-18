@@ -11,27 +11,23 @@ jest.mock("../../app/storage/i18n");
 
 // The post's url query param required to test the page.
 const url = {
-    query: {
-        id: 757,
-    },
+  query: {
+    id: 757
+  }
 };
 
 it("post page server side rendering - snapshot test", () => {
-    const props = Post.getInitialProps({req: true});
+  const props = Post.getInitialProps({ req: true });
 
-    const tree = renderer.create(
-        <Post {...props} url={url} />,
-    ).toJSON();
+  const tree = renderer.create(<Post {...props} url={url} />).toJSON();
 
-    expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
 
 it("post page client side rendering - snapshot test", () => {
-    const props = Post.getInitialProps({req: false});
+  const props = Post.getInitialProps({ req: false });
 
-    const tree = renderer.create(
-        <Post {...props} url={url} />,
-    ).toJSON();
+  const tree = renderer.create(<Post {...props} url={url} />).toJSON();
 
-    expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });

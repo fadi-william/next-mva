@@ -10,27 +10,24 @@ import ShowListItem from "../ShowListItem/ShowListItem";
 
 // The ShowList's props interface.
 interface IShowListProps {
-    showList: TShowList;
+  showList: TShowList;
 }
 
 @observer
 export default class ShowList extends React.Component<IShowListProps> {
+  public render() {
+    const { shows, isLoading } = this.props.showList;
 
-    public render() {
-        const { shows, isLoading } = this.props.showList;
-
-        return (
-            <div>
-                <h1>Shows</h1>
-                {!isLoading && <ul>
-                    {shows.map((show, idx) => (
-                        <ShowListItem key={idx} show={show} />
-                    ))}
-                </ul>}
-                {isLoading && <div>
-                    Loading...
-                </div>}
-            </div>
-        );
-    }
+    return (
+      <div>
+        <h1>Shows</h1>
+        {!isLoading && (
+          <ul>
+            {shows.map((show, idx) => <ShowListItem key={idx} show={show} />)}
+          </ul>
+        )}
+        {isLoading && <div>Loading...</div>}
+      </div>
+    );
+  }
 }

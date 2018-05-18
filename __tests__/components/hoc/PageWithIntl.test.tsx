@@ -11,31 +11,26 @@ jest.mock("../../../app/service/showService");
 jest.mock("../../../app/storage/i18n");
 
 it("test page with i18n hoc component with the index page - snapshot test", () => {
+  const IndexWithIntl = pageWithIntl(Index);
 
-    const IndexWithIntl = pageWithIntl(Index);
+  const tree = renderer.create(<IndexWithIntl />).toJSON();
 
-    const tree = renderer.create(
-        <IndexWithIntl />,
-    ).toJSON();
-
-    expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
 
 it("test page with i18n hoc component with the index page with context - snapshot test", () => {
-    const context = {
-        req: {
-            headers: {
-                cookie: "userLocale=fr;",
-            },
-        },
-    };
+  const context = {
+    req: {
+      headers: {
+        cookie: "userLocale=fr;"
+      }
+    }
+  };
 
-    const IndexWithIntl = pageWithIntl(Index);
-    IndexWithIntl.getInitialProps(context);
+  const IndexWithIntl = pageWithIntl(Index);
+  IndexWithIntl.getInitialProps(context);
 
-    const tree = renderer.create(
-        <IndexWithIntl />,
-    ).toJSON();
+  const tree = renderer.create(<IndexWithIntl />).toJSON();
 
-    expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });

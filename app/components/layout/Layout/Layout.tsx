@@ -8,13 +8,11 @@ import Header from "../Header/Header";
 const layoutStyle = {
   border: "1px solid #DDD",
   margin: 20,
-  padding: 20,
+  padding: 20
 };
 
 class Layout extends React.Component {
-
   public render() {
-
     const props = this.props;
 
     return (

@@ -1,18 +1,15 @@
 {
-    "compilerOptions": {
-        "module": "es6",
-        "target": "es6",
-        "noImplicitAny": false,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "sourceMap": false,
-        "moduleResolution": "node",
-        "jsx": "react",
-        "allowSyntheticDefaultImports": false,
-        "experimentalDecorators": true,
-        "typeRoots": [
-			"./node_modules/@types",
-			"./src/types/"
-		]
-    }
+  "compilerOptions": {
+    "module": "es6",
+    "target": "es6",
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": false,
+    "experimentalDecorators": true,
+    "typeRoots": ["./node_modules/@types", "./src/types/"]
+  }
 }

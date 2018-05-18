@@ -5,7 +5,7 @@ import * as React from "react";
 import Layout from "../app/components/layout/Layout/Layout";
 
 export default () => (
-    <Layout>
-        <p>This is the about page!</p>
-    </Layout>
+  <Layout>
+    <p>This is the about page!</p>
+  </Layout>
 );

@@ -8,11 +8,9 @@ import ShowListItem from "../../../../app/components/lists/show/ShowListItem/Sho
 jest.mock("../../../../app/service/showService");
 
 it("show list item component - snapshot test", () => {
-    const showStore = getStore(false, 757);
+  const showStore = getStore(false, 757);
 
-    const tree = renderer.create(
-        <ShowListItem show={showStore} />,
-    ).toJSON();
+  const tree = renderer.create(<ShowListItem show={showStore} />).toJSON();
 
-    expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
