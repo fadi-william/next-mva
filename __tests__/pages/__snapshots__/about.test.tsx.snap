@@ -11,7 +11,7 @@ exports[`about page - snapshot test 1`] = `
   }
 >
   <div
-    className="Header"
+    className="header"
   >
     <nav>
       <a
@@ -27,7 +27,7 @@ exports[`about page - snapshot test 1`] = `
         About
       </a>
       <div
-        className="lang-switcher-ph"
+        className="langSwitcher"
       >
         <select
           defaultValue="en"

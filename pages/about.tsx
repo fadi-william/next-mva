@@ -1,5 +1,5 @@
 // The imported libs.
-import * as React from "react";
+import React from "react";
 
 // The imported external components.
 import Layout from "../app/components/layout/Layout/Layout";

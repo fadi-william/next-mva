@@ -1,5 +1,5 @@
-import * as jsonQuery from "json-query";
-import * as shows from "./getShows.json";
+import jsonQuery from "json-query";
+import shows from "./getShows.json";
 
 export function getShow(id: number) {
   const data = jsonQuery(`[show][*id=${id}]`, { data: shows }).value[0];

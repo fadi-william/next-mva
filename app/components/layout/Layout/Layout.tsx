@@ -1,5 +1,5 @@
 // The imported libs.
-import * as React from "react";
+import React from "react";
 
 // The external imported components.
 import Header from "../Header/Header";

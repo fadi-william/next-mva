@@ -1,6 +1,6 @@
 // The imported libs.
 import { observer } from "mobx-react";
-import * as React from "react";
+import React from "react";
 
 // Import the mst store.
 import { getStore } from "../../models/I18n";
@@ -16,8 +16,7 @@ export default function i18nMessagesHOC(
     public render() {
       const store = getStore();
       const messages = store.messages;
-
-      return <Component messages={messages} />;
+      return <Component messages={messages.default} />;
     }
   }
 

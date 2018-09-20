@@ -1,5 +1,5 @@
-import * as React from "react";
-import * as renderer from "react-test-renderer";
+import React from "react";
+import renderer from "react-test-renderer";
 import { getStore } from "../../../../app/models/show/Show";
 
 import ShowListItem from "../../../../app/components/lists/show/ShowListItem/ShowListItem";

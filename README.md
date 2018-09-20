@@ -9,13 +9,13 @@ This small app has been developed to provide a minimum viable architecture of a 
 
 ## The project uses the following technologies :
 
-* [TypeScript](https://www.typescriptlang.org/)
-* [React](http://facebook.github.io/react/)
-* [MST](https://github.com/mobxjs/mobx-state-tree)
-* [RxJS](http://reactivex.io/rxjs/)
-* [Sass](http://sass-lang.com/)
-* [Jest](http://facebook.github.io/jest/)
-* [Enzyme](https://github.com/airbnb/enzyme)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](http://facebook.github.io/react/)
+- [MST](https://github.com/mobxjs/mobx-state-tree)
+- [RxJS](http://reactivex.io/rxjs/)
+- [Sass](http://sass-lang.com/)
+- [Jest](http://facebook.github.io/jest/)
+- [Enzyme](https://github.com/airbnb/enzyme)
 
 ## Development
 
@@ -34,9 +34,9 @@ Once you are done with your project.
 ## License
 
 ```
-Copyright (c) 2018 Levioza<fadi.william.ghali@levioza.fr>
+Copyright (c) 2018 Levioza<fadi.william.ghali@levioza.tech>
 
-Site: https://www.levioza.fr
+Site: https://www.levioza.tech
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy of the License at

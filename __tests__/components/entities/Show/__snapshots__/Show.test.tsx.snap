@@ -2,7 +2,7 @@
 
 exports[`show entity after loading - snapshot test 1`] = `
 <div
-  className="Show"
+  className="show"
 >
   <div>
     <h1>
@@ -20,7 +20,7 @@ exports[`show entity after loading - snapshot test 1`] = `
 
 exports[`show entity while loading - snapshot test 1`] = `
 <div
-  className="Show"
+  className="show"
 >
   <div>
     Loading...

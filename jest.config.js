@@ -1,0 +1,12 @@
+module.exports = {
+  preset: "ts-jest",
+  testEnvironment: "node",
+  globals: {
+    "ts-jest": {
+      tsConfig: "./tsconfig.test.json"
+    }
+  },
+  moduleNameMapper: {
+    "\\.scss$": "identity-obj-proxy"
+  }
+};

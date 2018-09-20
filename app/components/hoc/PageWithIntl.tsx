@@ -1,6 +1,6 @@
 // The imported libs.
 import { observer } from "mobx-react";
-import * as React from "react";
+import React from "react";
 import { injectIntl, IntlProvider } from "react-intl";
 
 // Import the mst store.

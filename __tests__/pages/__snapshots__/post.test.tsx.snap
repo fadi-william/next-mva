@@ -11,7 +11,7 @@ exports[`post page client side rendering - snapshot test 1`] = `
   }
 >
   <div
-    className="Header"
+    className="header"
   >
     <nav>
       <a
@@ -27,7 +27,7 @@ exports[`post page client side rendering - snapshot test 1`] = `
         About
       </a>
       <div
-        className="lang-switcher-ph"
+        className="langSwitcher"
       >
         <select
           defaultValue="en"
@@ -48,7 +48,7 @@ exports[`post page client side rendering - snapshot test 1`] = `
     </nav>
   </div>
   <div
-    className="Show"
+    className="show"
   >
     <div>
       Loading...
@@ -68,7 +68,7 @@ exports[`post page server side rendering - snapshot test 1`] = `
   }
 >
   <div
-    className="Header"
+    className="header"
   >
     <nav>
       <a
@@ -84,7 +84,7 @@ exports[`post page server side rendering - snapshot test 1`] = `
         About
       </a>
       <div
-        className="lang-switcher-ph"
+        className="langSwitcher"
       >
         <select
           defaultValue="en"
@@ -105,7 +105,7 @@ exports[`post page server side rendering - snapshot test 1`] = `
     </nav>
   </div>
   <div
-    className="Show"
+    className="show"
   >
     <div>
       Loading...

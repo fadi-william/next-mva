@@ -4,6 +4,16 @@ exports[`i18n model tests can change language 1`] = `
 Object {
   "locale": "fr",
   "messages": Object {
+    "default": Object {
+      "lang": Object {
+        "english": "Anglais",
+        "french": "Français",
+      },
+      "nav": Object {
+        "about": "À props",
+        "home": "Accueil",
+      },
+    },
     "lang": Object {
       "english": "Anglais",
       "french": "Français",
@@ -20,6 +30,16 @@ exports[`i18n model tests can create an i18n model 1`] = `
 Object {
   "locale": "en",
   "messages": Object {
+    "default": Object {
+      "lang": Object {
+        "english": "English",
+        "french": "French",
+      },
+      "nav": Object {
+        "about": "About",
+        "home": "Home",
+      },
+    },
     "lang": Object {
       "english": "English",
       "french": "French",
@@ -36,6 +56,16 @@ exports[`i18n model tests can get a store 1`] = `
 Object {
   "locale": "en",
   "messages": Object {
+    "default": Object {
+      "lang": Object {
+        "english": "English",
+        "french": "French",
+      },
+      "nav": Object {
+        "about": "About",
+        "home": "Home",
+      },
+    },
     "lang": Object {
       "english": "English",
       "french": "French",
@@ -52,6 +82,16 @@ exports[`i18n model tests can restore am i18n model from a snaphost 1`] = `
 Object {
   "locale": "en",
   "messages": Object {
+    "default": Object {
+      "lang": Object {
+        "english": "English",
+        "french": "French",
+      },
+      "nav": Object {
+        "about": "About",
+        "home": "Home",
+      },
+    },
     "lang": Object {
       "english": "English",
       "french": "French",

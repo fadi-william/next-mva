@@ -1,6 +1,6 @@
 // The imported libs.
 import { observer } from "mobx-react";
-import * as React from "react";
+import React from "react";
 
 // The component's model type.
 import { TShow } from "../../../models/show/Show";
@@ -11,7 +11,7 @@ interface IShowProps {
 }
 
 // Import the component styles.
-import "./Show.scss";
+import styles from "./Show.scss";
 
 @observer
 class Show extends React.Component<IShowProps> {
@@ -20,7 +20,7 @@ class Show extends React.Component<IShowProps> {
     const { isLoading } = show;
 
     return (
-      <div className="Show">
+      <div className={styles.show}>
         {!isLoading && (
           <div>
             <h1>{show.name}</h1>

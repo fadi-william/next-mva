@@ -1,15 +1,21 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "module": "es6",
-    "target": "es6",
-    "noImplicitAny": false,
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "sourceMap": false,
-    "moduleResolution": "node",
-    "jsx": "react",
-    "allowSyntheticDefaultImports": false,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
     "experimentalDecorators": true,
-    "typeRoots": ["./node_modules/@types", "./src/types/"]
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types", "./types/"],
+    "lib": ["dom", "es2016"]
   }
 }

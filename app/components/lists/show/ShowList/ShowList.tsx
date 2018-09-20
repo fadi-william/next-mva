@@ -1,6 +1,6 @@
 // The imported libs.
 import { observer } from "mobx-react";
-import * as React from "react";
+import React from "react";
 
 // The component's model type.
 import { TShowList } from "../../../../models/show/ShowList";
@@ -23,7 +23,9 @@ export default class ShowList extends React.Component<IShowListProps> {
         <h1>Shows</h1>
         {!isLoading && (
           <ul>
-            {shows.map((show, idx) => <ShowListItem key={idx} show={show} />)}
+            {shows.map((show, idx) => (
+              <ShowListItem key={idx} show={show} />
+            ))}
           </ul>
         )}
         {isLoading && <div>Loading...</div>}

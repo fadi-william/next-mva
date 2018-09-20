@@ -1,5 +1,5 @@
-import * as React from "react";
-import * as renderer from "react-test-renderer";
+import React from "react";
+import renderer from "react-test-renderer";
 import { Show as ShowMST } from "../../../../app/models/show/Show";
 
 import Show from "../../../../app/components/entities/Show/Show";

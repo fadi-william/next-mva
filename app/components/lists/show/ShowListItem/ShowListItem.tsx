@@ -1,6 +1,6 @@
 // The imported libs.
 import Link from "next/link";
-import * as React from "react";
+import React from "react";
 
 // The component's model type.
 import { TShow } from "../../../../models/show/Show";

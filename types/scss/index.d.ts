@@ -21,7 +21,7 @@
  * DEALINGS IN THE SOFTWARE.
  */
 
-declare module "*.json" {
+declare module "*.scss" {
   const value: any;
   export default value;
 }
